@@ -36,5 +36,10 @@ namespace RestaurantAPI.Entities
                 eb.Property(eb => eb.Price).IsRequired();
             });
         }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseMySql(_connectionSting, ServerVersion.AutoDetect(_connectionSting));
+        }
     }
 }
