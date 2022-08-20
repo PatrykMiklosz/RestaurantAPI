@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "YaiOc8pU+CRHmobpSV5p+xsmsmBT9KHZv4Q2fSZzv4YIsJiXgbmnAIn1x3X/sEsD9HIhZMDb6Gxh8ccC2jwyLQ==",
+  "dgSpecHash": "u2eD4U3NTi1+1pj2yG9bZqGzd5brwLqQUJbUr4DGbL9qKaA6rwdo3uSzRWv66wKT7x/0hOWgcBiAkiJ3xEGPoQ==",
   "success": true,
   "projectFilePath": "/Users/patrykmiklosz/Desktop/RestaurantAPI/RestaurantAPI.csproj",
   "expectedPackageFiles": [
+    "/Users/patrykmiklosz/.nuget/packages/automapper/11.0.0/automapper.11.0.0.nupkg.sha512",
+    "/Users/patrykmiklosz/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/11.0.0/automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "/Users/patrykmiklosz/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
+    "/Users/patrykmiklosz/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/patrykmiklosz/.nuget/packages/microsoft.entityframeworkcore/6.0.8/microsoft.entityframeworkcore.6.0.8.nupkg.sha512",
     "/Users/patrykmiklosz/.nuget/packages/microsoft.entityframeworkcore.abstractions/6.0.8/microsoft.entityframeworkcore.abstractions.6.0.8.nupkg.sha512",
     "/Users/patrykmiklosz/.nuget/packages/microsoft.entityframeworkcore.analyzers/6.0.8/microsoft.entityframeworkcore.analyzers.6.0.8.nupkg.sha512",
