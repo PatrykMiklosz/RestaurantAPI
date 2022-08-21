@@ -13,10 +13,15 @@ namespace RestaurantAPI
         public RestaurantMappingProfile()
         {
             CreateMap<CreateRestaurantDto, Restaurant>()
-                .ForMember(r=>r.Address, c=>c.MapFrom(dto=>new Address()
+                .ForMember(m => m.Address, c => c.MapFrom(dto => new Address()
                 {
-                    City = dto.City, Street = dto.Street
+                    City = dto.City,
+                    Street = dto.Street
                 }));
+
+            CreateMap<Restaurant, RestaurantDto>()
+                .ForMember(m => m.City, c => c.MapFrom(s => s.Address.City))
+                .ForMember(m => m.Street, c => c.MapFrom(s => s.Address.Street));
         }
     }
 }
