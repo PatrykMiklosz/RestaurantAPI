@@ -18,7 +18,7 @@ namespace RestaurantAPI.Entities
             modelBuilder.Entity<Restaurant>(eb =>
 
             {
-                eb.Property(r => r.Name).IsRequired();
+                eb.Property(r => r.Name).IsRequired().HasMaxLength(50);
 
                 eb.HasOne(r => r.Address).WithOne(a => a.Restaurant).HasForeignKey<Address>(a => a.RestaurantId);
                 eb.HasMany(r => r.Dishes).WithOne(d => d.Restaurant).HasForeignKey(d => d.RestaurantId);
@@ -26,8 +26,8 @@ namespace RestaurantAPI.Entities
 
             modelBuilder.Entity<Address>(eb =>
             {
-                eb.Property(a => a.Street).IsRequired();
-                eb.Property(a => a.City).IsRequired();
+                eb.Property(a => a.Street).IsRequired().HasMaxLength(50);
+                eb.Property(a => a.City).IsRequired().HasMaxLength(50);
             });
 
             modelBuilder.Entity<Dish>(eb =>
