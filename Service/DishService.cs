@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using RestaurantAPI.Entities;
 using RestaurantAPI.Models;
 
@@ -10,8 +11,9 @@ namespace RestaurantAPI.Service
 {
     public interface IDishService
     {
-        int Create(int id, CreateDishDto dto);
-        
+        int Create(int restaurantId, CreateDishDto dto);
+        List<DishDto> Get(int restaurantId);
+        bool Delete(int restaurantId, int dishId);
     }
 
     public class DishService : IDishService
@@ -24,14 +26,33 @@ namespace RestaurantAPI.Service
             this.dbContext = dbContext;
             this.mapper = mapper;
         }
-        public int Create(int id, CreateDishDto dto)
+        public int Create(int restaurantId, CreateDishDto dto)
         {
-            var restaurant = dbContext.Restaurants.FirstOrDefault(r => r.Id == id); 
+            var restaurant = dbContext.Restaurants.FirstOrDefault(r => r.Id == restaurantId);
             var dish = mapper.Map<Dish>(dto);
-            
+
             dbContext.Dishes.Add(dish);
             dbContext.SaveChanges();
             return dish.Id;
+        }
+
+        public bool Delete(int restaurantId, int dishId)
+        {
+            var restaurant = dbContext.Restaurants.Include(r => r.Dishes).FirstOrDefault(r => r.Id == restaurantId);
+            var dish = restaurant.Dishes.FirstOrDefault(d => d.Id == dishId);
+            if(dish is null)
+            return false;
+            dbContext.Remove(dish);
+            dbContext.SaveChanges();
+            return true;
+        }
+
+        public List<DishDto> Get(int restaurantId)
+        {
+            var restaurant = dbContext.Restaurants.Include(r => r.Dishes).FirstOrDefault(r => r.Id == restaurantId);
+            var dishes = restaurant.Dishes.ToList();
+            var dishesDto = mapper.Map<List<DishDto>>(dishes);
+            return dishesDto;
         }
     }
 }
