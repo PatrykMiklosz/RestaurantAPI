@@ -1,5 +1,6 @@
 using System.Reflection;
 using RestaurantAPI.Entities;
+using RestaurantAPI.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<RestaurantDbContext>();
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+builder.Services.AddScoped<IRestaurantService, RestaurantService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
