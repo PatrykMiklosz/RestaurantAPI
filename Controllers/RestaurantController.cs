@@ -23,7 +23,7 @@ namespace RestaurantAPI.Controllers
         }
 
         [HttpPost]
-        public ActionResult CreateRestaurant([FromBody] CreateRestaurantDto dto)
+        public ActionResult Create([FromBody] CreateRestaurantDto dto)
         {
             if (!ModelState.IsValid)
             {
