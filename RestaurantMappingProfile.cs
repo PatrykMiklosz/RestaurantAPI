@@ -24,6 +24,8 @@ namespace RestaurantAPI
                 .ForMember(m => m.Street, c => c.MapFrom(s => s.Address.Street));
 
             CreateMap<CreateDishDto, Dish>();
+
+            CreateMap<Dish, DishDto>();
         }
     }
 }

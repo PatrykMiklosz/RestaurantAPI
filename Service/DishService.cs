@@ -11,6 +11,7 @@ namespace RestaurantAPI.Service
     public interface IDishService
     {
         int Create(int id, CreateDishDto dto);
+        
     }
 
     public class DishService : IDishService
@@ -25,7 +26,7 @@ namespace RestaurantAPI.Service
         }
         public int Create(int id, CreateDishDto dto)
         {
-            var restaurant = dbContext.Restaurants.FirstOrDefault(r => r.Id == id);
+            var restaurant = dbContext.Restaurants.FirstOrDefault(r => r.Id == id); 
             var dish = mapper.Map<Dish>(dto);
             
             dbContext.Dishes.Add(dish);
