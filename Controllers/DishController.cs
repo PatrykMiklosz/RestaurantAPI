@@ -8,13 +8,13 @@ using RestaurantAPI.Service;
 
 namespace RestaurantAPI.Controllers
 {
-    [Route("api/{restaurantId/dish}")]
+    [Route("api/{restaurantId}/dish")]
     [ApiController]
     public class DishController : ControllerBase
     {
-        private readonly DishService service;
+        private readonly IDishService service;
 
-        public DishController(DishService service)
+        public DishController(IDishService service)
         {
             this.service = service;
         }
