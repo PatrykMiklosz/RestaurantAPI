@@ -58,7 +58,7 @@
             },
             "NLog.Web.AspNetCore": {
               "target": "Package",
-              "version": "[5.1.1, )"
+              "version": "[5.0.0, )"
             },
             "Pomelo.EntityFrameworkCore.Mysql": {
               "target": "Package",

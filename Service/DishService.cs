@@ -20,11 +20,13 @@ namespace RestaurantAPI.Service
     {
         private readonly RestaurantDbContext dbContext;
         private readonly IMapper mapper;
+        private readonly ILogger<DishService> logger;
 
-        public DishService(RestaurantDbContext dbContext, IMapper mapper)
+        public DishService(RestaurantDbContext dbContext, IMapper mapper, ILogger<DishService> logger)
         {
             this.dbContext = dbContext;
             this.mapper = mapper;
+            this.logger = logger;
         }
         public int Create(int restaurantId, CreateDishDto dto)
         {
@@ -38,10 +40,11 @@ namespace RestaurantAPI.Service
 
         public bool Delete(int restaurantId, int dishId)
         {
+            logger.LogWarning($"Dish with ID : {dishId}  DELETED ACTION INVOKED");
             var restaurant = dbContext.Restaurants.Include(r => r.Dishes).FirstOrDefault(r => r.Id == restaurantId);
             var dish = restaurant.Dishes.FirstOrDefault(d => d.Id == dishId);
-            if(dish is null)
-            return false;
+            if (dish is null)
+                return false;
             dbContext.Remove(dish);
             dbContext.SaveChanges();
             return true;

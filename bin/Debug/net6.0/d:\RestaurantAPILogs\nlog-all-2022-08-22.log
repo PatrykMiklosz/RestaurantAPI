@@ -1,0 +1,183 @@
+2022-08-22 02:24:49.4720||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2022-08-22 02:24:49.6710||DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2022-08-22 02:24:50.0481||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer|Using development certificate: CN=localhost (Thumbprint: A9C7BEEFAB19DFA390198C6D2E18E36D8784E2F4) 
+2022-08-22 02:24:50.1021||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7086 
+2022-08-22 02:24:50.1022||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5219 
+2022-08-22 02:24:50.1022||DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly RestaurantAPI 
+2022-08-22 02:24:50.1022||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2022-08-22 02:24:50.1022||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2022-08-22 02:24:50.1022||INFO|Microsoft.Hosting.Lifetime|Content root path: /Users/patrykmiklosz/Desktop/RestaurantAPI/ 
+2022-08-22 02:24:50.1022||DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2022-08-22 02:24:51.6498||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMK3QITCL9CL" received FIN. 
+2022-08-22 02:24:51.6640||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMK3QITCL9CL" accepted. 
+2022-08-22 02:24:51.6653||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMK3QITCL9CL" started. 
+2022-08-22 02:24:51.6693||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMK3QITCL9CM" accepted. 
+2022-08-22 02:24:51.6693||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMK3QITCL9CM" started. 
+2022-08-22 02:24:51.6893||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Failed to authenticate HTTPS connection. System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-08-22 02:24:51.7588||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMK3QITCL9CL" stopped. 
+2022-08-22 02:24:51.7647||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMK3QITCL9CL" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2022-08-22 02:24:51.7955||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Connection 0HMK3QITCL9CM established using the following protocol: Tls12 
+2022-08-22 02:24:51.8647||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 POST https://localhost:7086/api/4/dish/ application/json 64 
+2022-08-22 02:24:51.8664||DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2022-08-22 02:24:51.8664||TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-08-22 02:24:51.9193||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/4/dish/' 
+2022-08-22 02:24:51.9295||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'RestaurantAPI.Controllers.DishController.Create (RestaurantAPI)' with route pattern 'api/{restaurantId}/dish' is valid for the request path '/api/4/dish/' 
+2022-08-22 02:24:51.9304||DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'RestaurantAPI.Controllers.DishController.Create (RestaurantAPI)' 
+2022-08-22 02:24:51.9618||DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2022-08-22 02:24:51.9698||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'RestaurantAPI.Controllers.DishController.Create (RestaurantAPI)' 
+2022-08-22 02:24:52.0126||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Create", controller = "Dish"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Create(Int32, RestaurantAPI.Models.CreateDishDto) on controller RestaurantAPI.Controllers.DishController (RestaurantAPI). 
+2022-08-22 02:24:52.0135||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-08-22 02:24:52.0135||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2022-08-22 02:24:52.0135||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2022-08-22 02:24:52.0135||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-08-22 02:24:52.0135||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2022-08-22 02:24:52.0167||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller RestaurantAPI.Controllers.DishController (RestaurantAPI) 
+2022-08-22 02:24:52.3922||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller RestaurantAPI.Controllers.DishController (RestaurantAPI) 
+2022-08-22 02:24:52.4003||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'restaurantId' of type 'System.Int32' ... 
+2022-08-22 02:24:52.4032||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'restaurantId' of type 'System.Int32' using the name 'restaurantId' in request data ... 
+2022-08-22 02:24:52.4049||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'restaurantId' of type 'System.Int32'. 
+2022-08-22 02:24:52.4049||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'restaurantId' of type 'System.Int32'. 
+2022-08-22 02:24:52.4049||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'restaurantId' of type 'System.Int32' ... 
+2022-08-22 02:24:52.4069||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'restaurantId' of type 'System.Int32'. 
+2022-08-22 02:24:52.4087||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'dto' of type 'RestaurantAPI.Models.CreateDishDto' ... 
+2022-08-22 02:24:52.4097||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Attempting to bind parameter 'dto' of type 'RestaurantAPI.Models.CreateDishDto' using the name '' in request data ... 
+2022-08-22 02:24:52.4106||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json'. 
+2022-08-22 02:24:52.4106||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json'. 
+2022-08-22 02:24:52.4213||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK3QITCL9CM", Request id "0HMK3QITCL9CM:00000002": started reading request body. 
+2022-08-22 02:24:52.4213||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK3QITCL9CM", Request id "0HMK3QITCL9CM:00000002": done reading request body. 
+2022-08-22 02:24:52.6514||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|Done attempting to bind parameter 'dto' of type 'RestaurantAPI.Models.CreateDishDto'. 
+2022-08-22 02:24:52.6514||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'dto' of type 'RestaurantAPI.Models.CreateDishDto'. 
+2022-08-22 02:24:52.6514||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'dto' of type 'RestaurantAPI.Models.CreateDishDto' ... 
+2022-08-22 02:24:52.6625||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'dto' of type 'RestaurantAPI.Models.CreateDishDto'. 
+2022-08-22 02:24:52.6633||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-22 02:24:52.6633||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-22 02:24:52.6633||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-22 02:24:52.6633||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-22 02:24:52.6682||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method RestaurantAPI.Controllers.DishController.Create (RestaurantAPI) - Validation state: Valid 
+2022-08-22 02:24:52.6684||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method RestaurantAPI.Controllers.DishController.Create (RestaurantAPI) with arguments (4, RestaurantAPI.Models.CreateDishDto) 
+2022-08-22 02:24:55.5444||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method RestaurantAPI.Controllers.DishController.Create (RestaurantAPI), returned result Microsoft.AspNetCore.Mvc.CreatedResult in 2870.7527ms. 
+2022-08-22 02:24:55.5444||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-22 02:24:55.5444||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-22 02:24:55.5444||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-22 02:24:55.5444||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-22 02:24:55.5444||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-08-22 02:24:55.5454||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-08-22 02:24:55.5469||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.CreatedResult. 
+2022-08-22 02:24:55.5485||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter 
+2022-08-22 02:24:55.5502||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2022-08-22 02:24:55.5504||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2022-08-22 02:24:55.5504||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2022-08-22 02:24:55.5517||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter' and content type '' to write the response. 
+2022-08-22 02:24:55.5525||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing CreatedResult, writing value of type 'null'. 
+2022-08-22 02:24:55.5525||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.CreatedResult. 
+2022-08-22 02:24:55.5525||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-08-22 02:24:55.5525||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-08-22 02:24:55.5570||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action RestaurantAPI.Controllers.DishController.Create (RestaurantAPI) in 3538.6893ms 
+2022-08-22 02:24:55.5570||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'RestaurantAPI.Controllers.DishController.Create (RestaurantAPI)' 
+2022-08-22 02:24:55.5587||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMK3QITCL9CM" completed keep alive response. 
+2022-08-22 02:24:55.5694||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 POST https://localhost:7086/api/4/dish/ application/json 64 - 201 0 - 3706.9550ms 
+2022-08-22 02:25:01.0114||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 GET https://localhost:7086/api/4/dish/ application/json 64 
+2022-08-22 02:25:01.0116||TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-08-22 02:25:01.0116||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/4/dish/' 
+2022-08-22 02:25:01.0116||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'RestaurantAPI.Controllers.DishController.Get (RestaurantAPI)' with route pattern 'api/{restaurantId}/dish' is valid for the request path '/api/4/dish/' 
+2022-08-22 02:25:01.0116||DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'RestaurantAPI.Controllers.DishController.Get (RestaurantAPI)' 
+2022-08-22 02:25:01.0206||DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2022-08-22 02:25:01.0206||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'RestaurantAPI.Controllers.DishController.Get (RestaurantAPI)' 
+2022-08-22 02:25:01.0244||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Get", controller = "Dish"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Get(Int32) on controller RestaurantAPI.Controllers.DishController (RestaurantAPI). 
+2022-08-22 02:25:01.0244||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-08-22 02:25:01.0245||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2022-08-22 02:25:01.0245||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2022-08-22 02:25:01.0245||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-08-22 02:25:01.0245||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2022-08-22 02:25:01.0245||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller RestaurantAPI.Controllers.DishController (RestaurantAPI) 
+2022-08-22 02:25:01.0292||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller RestaurantAPI.Controllers.DishController (RestaurantAPI) 
+2022-08-22 02:25:01.0297||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'restaurantId' of type 'System.Int32' ... 
+2022-08-22 02:25:01.0297||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'restaurantId' of type 'System.Int32' using the name 'restaurantId' in request data ... 
+2022-08-22 02:25:01.0297||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'restaurantId' of type 'System.Int32'. 
+2022-08-22 02:25:01.0297||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'restaurantId' of type 'System.Int32'. 
+2022-08-22 02:25:01.0297||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'restaurantId' of type 'System.Int32' ... 
+2022-08-22 02:25:01.0297||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'restaurantId' of type 'System.Int32'. 
+2022-08-22 02:25:01.0297||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-22 02:25:01.0297||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-22 02:25:01.0297||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-22 02:25:01.0306||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-22 02:25:01.0306||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method RestaurantAPI.Controllers.DishController.Get (RestaurantAPI) - Validation state: Valid 
+2022-08-22 02:25:01.0306||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method RestaurantAPI.Controllers.DishController.Get (RestaurantAPI) with arguments (4) 
+2022-08-22 02:25:01.2989||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method RestaurantAPI.Controllers.DishController.Get (RestaurantAPI), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 268.0222ms. 
+2022-08-22 02:25:01.2989||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-22 02:25:01.2989||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-22 02:25:01.2989||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-22 02:25:01.2989||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-22 02:25:01.2989||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-08-22 02:25:01.2989||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-08-22 02:25:01.2989||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2022-08-22 02:25:01.2989||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter 
+2022-08-22 02:25:01.2996||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|No information found on request to perform content negotiation. 
+2022-08-22 02:25:01.2996||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2022-08-22 02:25:01.2996||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Attempting to select the first formatter in the output formatters list which can write the result. 
+2022-08-22 02:25:01.2996||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response. 
+2022-08-22 02:25:01.2996||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[RestaurantAPI.Models.DishDto, RestaurantAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2022-08-22 02:25:01.3652||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2022-08-22 02:25:01.3652||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-08-22 02:25:01.3652||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-08-22 02:25:01.3652||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action RestaurantAPI.Controllers.DishController.Get (RestaurantAPI) in 340.6158ms 
+2022-08-22 02:25:01.3652||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'RestaurantAPI.Controllers.DishController.Get (RestaurantAPI)' 
+2022-08-22 02:25:01.3652||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMK3QITCL9CM" completed keep alive response. 
+2022-08-22 02:25:01.3656||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 GET https://localhost:7086/api/4/dish/ application/json 64 - 200 171 application/json;+charset=utf-8 354.2442ms 
+2022-08-22 02:25:01.3656||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK3QITCL9CM", Request id "0HMK3QITCL9CM:00000003": started reading request body. 
+2022-08-22 02:25:01.3656||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK3QITCL9CM", Request id "0HMK3QITCL9CM:00000003": done reading request body. 
+2022-08-22 02:25:11.5918||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/1.1 DELETE https://localhost:7086/api/4/dish/4 application/json 64 
+2022-08-22 02:25:11.5919||TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2022-08-22 02:25:11.5919||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/api/4/dish/4' 
+2022-08-22 02:25:11.5919||DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'RestaurantAPI.Controllers.DishController.Delete (RestaurantAPI)' with route pattern 'api/{restaurantId}/dish/{id}' is valid for the request path '/api/4/dish/4' 
+2022-08-22 02:25:11.5919||DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'RestaurantAPI.Controllers.DishController.Delete (RestaurantAPI)' 
+2022-08-22 02:25:11.5930||DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Static files was skipped as the request already matched an endpoint. 
+2022-08-22 02:25:11.5930||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'RestaurantAPI.Controllers.DishController.Delete (RestaurantAPI)' 
+2022-08-22 02:25:11.5946||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Delete", controller = "Dish"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Delete(Int32, Int32) on controller RestaurantAPI.Controllers.DishController (RestaurantAPI). 
+2022-08-22 02:25:11.5946||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2022-08-22 02:25:11.5946||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): None 
+2022-08-22 02:25:11.5946||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000) 
+2022-08-22 02:25:11.5949||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2022-08-22 02:25:11.5949||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000) 
+2022-08-22 02:25:11.5949||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller RestaurantAPI.Controllers.DishController (RestaurantAPI) 
+2022-08-22 02:25:11.5984||DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller RestaurantAPI.Controllers.DishController (RestaurantAPI) 
+2022-08-22 02:25:11.5984||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'restaurantId' of type 'System.Int32' ... 
+2022-08-22 02:25:11.5984||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'restaurantId' of type 'System.Int32' using the name 'restaurantId' in request data ... 
+2022-08-22 02:25:11.5989||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'restaurantId' of type 'System.Int32'. 
+2022-08-22 02:25:11.5989||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'restaurantId' of type 'System.Int32'. 
+2022-08-22 02:25:11.5989||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'restaurantId' of type 'System.Int32' ... 
+2022-08-22 02:25:11.6015||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'restaurantId' of type 'System.Int32'. 
+2022-08-22 02:25:11.6015||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to bind parameter 'id' of type 'System.Int32' ... 
+2022-08-22 02:25:11.6019||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ... 
+2022-08-22 02:25:11.6019||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder|Done attempting to bind parameter 'id' of type 'System.Int32'. 
+2022-08-22 02:25:11.6019||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to bind parameter 'id' of type 'System.Int32'. 
+2022-08-22 02:25:11.6019||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Attempting to validate the bound parameter 'id' of type 'System.Int32' ... 
+2022-08-22 02:25:11.6019||DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder|Done attempting to validate the bound parameter 'id' of type 'System.Int32'. 
+2022-08-22 02:25:11.6019||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-22 02:25:11.6019||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-22 02:25:11.6019||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-22 02:25:11.6019||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-22 02:25:11.6019||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method RestaurantAPI.Controllers.DishController.Delete (RestaurantAPI) - Validation state: Valid 
+2022-08-22 02:25:11.6019||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method RestaurantAPI.Controllers.DishController.Delete (RestaurantAPI) with arguments (4, 4) 
+2022-08-22 02:25:11.6048||WARN|RestaurantAPI.Service.DishService|Dish with ID : 4  DELETED ACTION INVOKED 
+2022-08-22 02:25:11.7892||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method RestaurantAPI.Controllers.DishController.Delete (RestaurantAPI), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 186.6276ms. 
+2022-08-22 02:25:11.7892||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-22 02:25:11.7892||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2022-08-22 02:25:11.7892||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-22 02:25:11.7892||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2022-08-22 02:25:11.7892||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-08-22 02:25:11.7892||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-08-22 02:25:11.7892||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.NoContentResult. 
+2022-08-22 02:25:11.7931||INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing StatusCodeResult, setting HTTP status code 204 
+2022-08-22 02:25:11.7931||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.NoContentResult. 
+2022-08-22 02:25:11.7931||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-08-22 02:25:11.7931||TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter. 
+2022-08-22 02:25:11.7931||INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action RestaurantAPI.Controllers.DishController.Delete (RestaurantAPI) in 198.2842ms 
+2022-08-22 02:25:11.7931||INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'RestaurantAPI.Controllers.DishController.Delete (RestaurantAPI)' 
+2022-08-22 02:25:11.7931||DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMK3QITCL9CM" completed keep alive response. 
+2022-08-22 02:25:11.7931||INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/1.1 DELETE https://localhost:7086/api/4/dish/4 application/json 64 - 204 - - 201.7626ms 
+2022-08-22 02:25:11.7931||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK3QITCL9CM", Request id "0HMK3QITCL9CM:00000004": started reading request body. 
+2022-08-22 02:25:11.7931||DEBUG|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HMK3QITCL9CM", Request id "0HMK3QITCL9CM:00000004": done reading request body. 
