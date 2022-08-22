@@ -1,9 +1,13 @@
 using System.Reflection;
+using NLog.Web;
 using RestaurantAPI.Entities;
 using RestaurantAPI.Service;
 
-var builder = WebApplication.CreateBuilder(args);
+var builder = WebApplication.CreateBuilder();
 
+builder.Logging.ClearProviders();
+builder.Logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
+builder.Host.UseNLog();
 // Add services to the container.
 
 builder.Services.AddControllers().AddNewtonsoftJson();
@@ -14,6 +18,7 @@ builder.Services.AddDbContext<RestaurantDbContext>();
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 builder.Services.AddScoped<IRestaurantService, RestaurantService>();
 builder.Services.AddScoped<IDishService, DishService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
